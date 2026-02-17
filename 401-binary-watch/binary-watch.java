@@ -7,8 +7,7 @@ class Solution{
                     String time=h+":"+(m<10?"0"+m:m);
                     result.add(time);
                 }
-            }
-        }
+            } }
         return result;
     }
 }
