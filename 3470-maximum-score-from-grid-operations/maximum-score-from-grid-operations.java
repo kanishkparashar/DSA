@@ -1,5 +1,4 @@
 class Solution {
-
     public long maximumScore(int[][] grid) {
         int n = grid[0].length;
         if (n == 1) {
