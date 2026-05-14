@@ -1,13 +1,17 @@
 class Solution {
 	public boolean isGood(int[] nums) {
-		Arrays.sort(nums);
-		int n=nums.length;
-		if(nums[n-1]!=n-1)
+		int n=nums.length,m=0;
+		int[] f=new int[201];
+		for(int x:nums){
+			f[x]++;
+			m=Math.max(m,x);
+		}
+		if(m!=n-1||f[m]!=2)
 			return false;
-		for(int i=0;i<n-2;i++){
-			if(nums[i]!=i+1)
+		for(int i=1;i<m;i++){
+			if(f[i]!=1)
 				return false;
 		}
-		return nums[n-2]==nums[n-1];
+		return true;
 	}
 }
